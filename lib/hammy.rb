@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-require "hammy/version"
+require_relative "./hammy/service_object"
+require_relative "./hammy/version"
 
 module Hammy
 end

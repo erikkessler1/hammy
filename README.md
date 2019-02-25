@@ -20,6 +20,22 @@ Or install it yourself as:
 
 ## Usage
 
+### ServiceObject
+
+Easily build "thing doer" classes by subclassing `Hammy::ServiceObject#build`.
+Available argument styles: `keyword` and `positional`.
+
+```ruby
+class ThingDoer < Hammy::ServiceObject.keyword(:one, :two)
+
+  def do_the_thing
+    puts "Doing the thing with #{one} and #{two}..."
+  end
+end
+
+ThingDoer.do_the_thing(one: :a, two: :b)
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then,
